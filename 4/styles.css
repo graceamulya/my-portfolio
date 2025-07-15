@@ -1,0 +1,254 @@
+/* ====== CSS RESET ====== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: #fdfdfd;
+  color: #1f2937; /* slate‑800 */
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ====== LAYOUT HELPERS ====== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: #111827; /* slate‑900 */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.accent {
+  color: #2563eb; /* blue‑600 */
+}
+
+/* ====== BUTTON ====== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #2563eb; /* blue‑600 */
+  color: #f9fafb; /* slate‑50 */
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #1d4ed8; /* blue‑700 */
+}
+
+/* ====== NAVIGATION ====== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffffee;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 3px;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: -100%;
+    flex-direction: column;
+    background: #fff;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+    transition: right 0.3s;
+  }
+  .nav-links.open {
+    right: 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ====== HERO ====== */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #eff6ff 0%, #fff 100%);
+}
+
+#hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #374151; /* slate‑700 */
+}
+
+/* ====== ABOUT ====== */
+#about .content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+}
+
+#about img {
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* ====== PROJECTS ====== */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card .card-body {
+  padding: 1.25rem;
+}
+
+/* ====== CONTACT ====== */
+#contact form {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #1f2937; /* slate‑800 */
+  color: #f9fafb; /* slate‑50 */
+  padding: 1rem 0;
+  text-align: center;
+}

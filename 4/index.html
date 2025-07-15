@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <!-- Google Font (optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header>
+      <div class="container nav">
+        <a href="#" class="logo">MyPortfolio</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button
+          aria-label="Open navigation"
+          class="hamburger"
+          id="hamburger"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <h1>
+        Hello, I'm <span class="accent"> Grace amulya</span>
+      </h1>
+      <p>
+        A passionate <strong> web developer</strong> 
+      </p>
+      <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+          <h2>About Me</h2>
+          <p>
+              greetings of the day . I am p grace amulya  . I'm pursing my btech 3rd yera in mallareddy engineering college for women 
+              i'm really intrested in learning new things and excited to work hard .good at programming(python java )
+             and  intrested in creating interactive web sites 
+          </p>
+          <p><strong>Technologies:</strong> HTML, CSS, JavaScript, React, Node.js</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <img
+              src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxLInh9Tk5huiSNKfizbrCEIq-3XMJLoU7fA&s
+              alt="Project 1"
+            />
+            <div class="card-body">
+              <h3>Project One</h3>
+              <p>
+                Identify potential hazards (e.g., fire, earthquake, flood, power outage, mass casualty incidents) specific to the IPD's location and infrastructure.
+                Assess the vulnerability of the IPD's physical structures, equipment, and resources to these hazards.
+              </p>
+              <a href="#" class="btn" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <img
+              src=https://keenethics.com/wp-content/uploads/2021/01/blood-test-application-screenshot-4.jpg
+              alt="Project 2"
+            />
+            <div class="card-body">
+              <h3>Project Two</h3>
+              <p>
+               A blood detection app is a mobile application, often paired with a specialized device or utilizing smartphone capabilities, that allows for the detection and sometimes analysis of blood or blood-related parameters. These apps are designed to provide a convenient and accessible way for individuals to monitor their health or for specific medical applications
+                
+              </p>
+              <a href="#" class="btn" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="container center">
+        <h2>Contact Me</h2>
+        <p>Have a project in mind or just want to say hi? Fill out the form below!</p>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
